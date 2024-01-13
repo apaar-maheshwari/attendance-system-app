@@ -32,11 +32,11 @@ def video_callback_func(frame):
     
     return av.VideoFrame.from_ndarray(reg_img,format='bgr24')
 
-webrtc_streamer(key='registration',video_frame_callback=video_callback_func,webrtc_streamer(
+webrtc_streamer(key='registration',video_frame_callback=video_callback_func,
     rtc_configuration={
         "iceServers": [{"urls": ["stun:stun.l.google.com:19302"]}]
     }
-))
+)
 
 
 # Step 3: Save data in redis database.
