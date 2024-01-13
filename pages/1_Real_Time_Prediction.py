@@ -44,11 +44,10 @@ def video_frame_callback(frame):
 
 
 webrtc_streamer(key="RealTimePrediction", video_frame_callback=video_frame_callback,
- webrtc_streamer(
     rtc_configuration={
         "iceServers": [{"urls": ["stun:stun.l.google.com:19302"]}]
     }
-))
+)
 
 
 
